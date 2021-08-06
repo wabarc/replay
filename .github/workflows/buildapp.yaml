@@ -3,7 +3,6 @@ name: Build ReplayWeb.page App
 on:
   push:
     branches:
-      - main
 
 jobs:
   release:
