@@ -11,10 +11,10 @@ jobs:
 
     strategy:
       matrix:
-        os: [macos-10.14, ubuntu-latest]
+        os: [macos-10.15, ubuntu-latest]
         platform: [windows, linux]
         exclude:
-          - os: macos-10.14
+          - os: macos-10.15
             platform: windows
 
     steps:
@@ -50,7 +50,7 @@ jobs:
               if [ "$GITHUB_REF" == "refs/heads/main" ]; then
                 export YARN_BUILD_CMD="release"
               else
-                export YARN_BUILD_CMD="dist"
+                export YARN_BUILD_CMD="release"
               fi
 
               if [ "$RUNNER_OS" == "Linux" ]; then
