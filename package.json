@@ -29,7 +29,7 @@
     "copy-webpack-plugin": "^6.3.0",
     "css-loader": "^3.5.3",
     "electron": "^11.4.11",
-    "electron-builder": "^22.7.0",
+    "electron-builder": "^22.11.7",
     "electron-notarize": "^1.0.0",
     "http-server": "^0.12.3",
     "mini-css-extract-plugin": "^0.9.0",
@@ -93,8 +93,14 @@
     "mac": {
       "category": "public.app-category.utilities",
       "target": [
-        "dmg",
-        "zip"
+        {
+          "target": "dmg",
+          "arch": "universal"
+        },
+        {
+          "target": "zip",
+          "arch": "universal"
+        }
       ],
       "hardenedRuntime": true,
       "gatekeeperAssess": false,
