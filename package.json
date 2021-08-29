@@ -29,7 +29,7 @@
     "copy-webpack-plugin": "^6.3.0",
     "css-loader": "^3.5.3",
     "electron": "^14.0.0-beta.24",
-    "electron-builder": "^22.13.1",
+    "electron-builder": "22.11.11",
     "electron-notarize": "^1.0.0",
     "http-server": "^0.12.3",
     "mini-css-extract-plugin": "^0.9.0",
