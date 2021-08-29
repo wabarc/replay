@@ -44,6 +44,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         run: |
+
+              sudo rm -Rf /Library/Developer/CommandLineTools/SDKs/*
+              sudo xcode-select -s "/Applications/Xcode_12.3.app"
+
               if [ "$GITHUB_REF" == "refs/heads/main" ] || [ -f ./force_release ]; then
                 export YARN_BUILD_CMD="release"
               else
